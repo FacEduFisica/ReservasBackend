@@ -21,6 +21,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+		\App\Http\Middleware\Cors::class,
     ];
 
     /**
@@ -67,5 +68,6 @@ class Kernel extends HttpKernel
         'actived' => \App\Http\Middleware\UserActiveMiddleware::class,
         'actived.system' => \App\Http\Middleware\UserActiveSystemMiddleware::class,
         'role.implements' => \App\Http\Middleware\CheckRoleImplementsMiddleware::class,
+		'cors' => \App\Http\Middleware\Cors::class,
     ];
 }
